@@ -8,7 +8,7 @@ Creating docker container for single or multi-node Zookeeper cluster that can ru
 To start Zookeeper as single node
 
 ```
-$ docker run akomic/zookeeper
+docker run akomic/zookeeper
 ```
 
 # Multi node
@@ -16,9 +16,9 @@ $ docker run akomic/zookeeper
 ## To start Zookeeper multi-node cluster (3 nodes)
 
 ```
-$ docker run -e SERVER_ID=1 -e MAX_SERVERS=3 --name zookeeper-1 --restart=always akomic/zookeeper
-$ docker run -e SERVER_ID=2 -e MAX_SERVERS=3 --name zookeeper-2 --restart=always akomic/zookeeper
-$ docker run -e SERVER_ID=3 -e MAX_SERVERS=3 --name zookeeper-3 --restart=always akomic/zookeeper
+docker run -e SERVER_ID=1 -e MAX_SERVERS=3 --name zookeeper-1 --restart=always akomic/zookeeper
+docker run -e SERVER_ID=2 -e MAX_SERVERS=3 --name zookeeper-2 --restart=always akomic/zookeeper
+docker run -e SERVER_ID=3 -e MAX_SERVERS=3 --name zookeeper-3 --restart=always akomic/zookeeper
 ```
 
 NOTICE: For this to work you need to provide the means for container to
